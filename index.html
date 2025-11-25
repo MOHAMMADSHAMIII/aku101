@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://s6.uupload.ir/files/aku2_53z3.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aku Design Studio | Creative Agency</title>
+    
+    <!-- Outfit Font (English) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              aku: {
+                teal: '#1CCFD9',
+                tealHover: '#15b8c2',
+                tealDark: '#0e8a91', 
+                navy: '#0A2A43',
+                dark: '#000000',
+                card: '#121212', 
+                light: '#F3F4F6',
+                gray: '#9CA3AF'
+              }
+            },
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+            },
+            borderRadius: {
+              '4xl': '2rem',
+              '5xl': '2.5rem',
+              '6xl': '3rem',
+            },
+            animation: {
+              'blob-1': 'blob1 20s infinite alternate linear',
+              'blob-2': 'blob2 25s infinite alternate linear',
+              'float': 'float 8s ease-in-out infinite',
+              'spin-slow': 'spin 30s linear infinite',
+            },
+            keyframes: {
+              blob1: {
+                '0%': { transform: 'translate3d(0, 0, 0)' },
+                '100%': { transform: 'translate3d(30px, -30px, 0)' },
+              },
+              blob2: {
+                '0%': { transform: 'translate3d(0, 0, 0)' },
+                '100%': { transform: 'translate3d(-30px, 30px, 0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Hide Scrollbar completely */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      * {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        -webkit-tap-highlight-color: transparent;
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Performance Optimizations */
+      .gpu-accelerated {
+        transform: translateZ(0);
+        will-change: transform, opacity;
+        backface-visibility: hidden;
+      }
+
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        transform: translateZ(0); /* Force GPU layer */
+      }
+
+      .dark .glass-panel {
+        background: rgba(10, 10, 10, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      }
+      
+      .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        transform: translateZ(0); /* Force GPU layer */
+      }
+
+      .dark .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: none;
+      }
+
+      .glass-card:hover {
+        transform: translateY(-5px) scale(1.02) translateZ(0);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      }
+      
+      .dark .glass-card:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      }
+
+      ::selection {
+        background: rgba(28, 207, 217, 0.3);
+        color: inherit;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?external=react,react-dom",
+    "framer-motion": "https://esm.sh/framer-motion@11.0.8?external=react,react-dom",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?external=react,react-dom",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="font-sans antialiased overflow-x-hidden bg-gray-50 text-gray-900 dark:bg-black dark:text-white transition-colors duration-300 ease-in-out">
+    <div id="root"></div>
+
+    <!-- 
+      Netlify Forms Detection 
+      These hidden forms tell Netlify's build bots what input fields to expect.
+    -->
+    
+    <!-- 1. Contact Form -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="project_type" />
+      <textarea name="message"></textarea>
+    </form>
+
+    <!-- 2. Briefs Form (Includes all possible fields from briefs.ts) -->
+    <form name="briefs" netlify netlify-honeypot="bot-field" hidden>
+      <!-- Meta -->
+      <input type="text" name="service_id" />
+      
+      <!-- Common Questions -->
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="phone" />
+      <input type="text" name="budget" />
+      <input type="text" name="timeline" />
+      
+      <!-- Branding -->
+      <input type="text" name="brand_name" />
+      <textarea name="brand_values"></textarea>
+      <input type="text" name="style_preference" />
+      <textarea name="deliverables"></textarea>
+      
+      <!-- Social Media -->
+      <input type="text" name="platforms" />
+      <input type="text" name="goal" />
+      <textarea name="content_type"></textarea>
+      
+      <!-- UI/UX -->
+      <input type="text" name="product_type" />
+      <textarea name="target_audience"></textarea>
+      <textarea name="competitors"></textarea>
+      <textarea name="features"></textarea>
+      
+      <!-- Packaging -->
+      <textarea name="product_desc"></textarea>
+      <input type="text" name="material" />
+      <input type="text" name="print_specs" />
+      
+      <!-- General -->
+      <input type="text" name="project_type" />
+      <input type="text" name="content" />
+    </form>
+
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
+    
