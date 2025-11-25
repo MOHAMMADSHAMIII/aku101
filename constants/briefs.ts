@@ -38,7 +38,7 @@ const END_QUESTIONS: Question[] = [
     id: 'budget',
     text: "What is your estimated budget for this project?",
     type: 'choice',
-    options: ["< $1k", "$1k - $5k", "$5k - $10k", "$10k+"],
+    options: ["< $1k", "$1k - $5k", "$5k - $10k", "99k+"],
     required: true
   },
   {
