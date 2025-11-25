@@ -21,14 +21,14 @@ const COMMON_QUESTIONS: Question[] = [
     id: 'name',
     text: "What is your full name?",
     type: 'text',
-    placeholder: "John Doe",
+    placeholder: "Mohammad Shami",
     required: true
   },
   {
     id: 'email',
     text: "What is your email address?",
     type: 'email',
-    placeholder: "john@example.com",
+    placeholder: "Shami@example.com",
     required: true
   }
 ];
